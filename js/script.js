@@ -1,15 +1,5 @@
 console.log("JS OK");
 
-let reversedText = [];
-
-function reverseword (text) {
-    for (let i = text.length - 1; i >= 0 ; i--) {
-        reversedText += text [i];
-    }
-    console.log(reversedText)
-}
-
-
 //! imposto l'azione del bottone submit ed impedisco il comportamento di default
 
 const textField = document.getElementById("text-field");
