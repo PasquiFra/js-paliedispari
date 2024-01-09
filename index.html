@@ -30,16 +30,44 @@
     
 <body>
 
+    <!-- ! PALINDROME CHECKER -->
     <form class="input-group m-3">
+        <h5>Palindrome checker</h5>
+
         <input id="text-field" type="text" class="form-control p-2" placeholder="Inserisci una parola qui">
+
         <div class="input-group">
             <span class="input-group-text my-2">Risultato:</span>
             <span id="input-result" class="my-2 form-control"></span>
         </div>
-        <button id="submit-button" class="btn btn-primary my-2 rounded" type="submit">Submit word</button>
-    </form>
-      
 
+        <button id="submit-button" class="btn btn-primary my-2 rounded" type="submit">Submit word</button>
+
+    </form>
+
+    <!--! PARI O DISPARI -->
+    <div class="m-3">
+        <h5>Pari o Dispari</h5>
+        <div class="input-group my-3">
+            <span class="input-group-text" id="user-choice">Scegli pari o dispari: </span>
+            <select id="pair-unpair" class="form-select">
+                <option value="true" selected>Pari</option>
+                <option value="false">Dispari</option>
+            </select>
+        </div>
+
+        <div class="input-group my-3">
+            <span class="input-group-text" id="user-number">Inserisci un numero da 1 a 5: </span>
+            <input id="your-number" type="text" class="form-control" placeholder="Il tuo numero">
+        </div>
+        <button id="send" class="btn btn-primary my-2 rounded" type="button">Sfida il PC!</button>
+
+        <div id="feedback" class="d-none">
+            <span id="pc-result"></span>
+            <span id="game-result"></span>
+        </div>
+
+    </div>
 
 </body>
 

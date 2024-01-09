@@ -39,3 +39,34 @@ form.addEventListener ("submit", function(event) {
         return inputResult.innerHTML = `<strong> ${isNotPalindrome} </strong>`;
     }
 })
+
+//! gioco del pari o dispari
+
+const pairUnpair = document.getElementById("pair-unpair");
+const yourNumber = document.getElementById("your-number");
+const button = document.getElementById("send");
+
+const pcResult = document.getElementById("pc-result");
+const gameResult = document.getElementById("game-result");
+const feedback = document.getElementById("feedback");
+
+button.addEventListener ("click", function() {
+
+    let userChoice = pairUnpair.value;
+    let userNumber = yourNumber.value;
+
+    console.log(userChoice, userNumber);
+
+    const randomNum = Math.floor((Math.random() * 5 + 1));
+    
+    console.log(randomNum);
+   
+    if ( isEven( sum(userNumber, randomNum)) === userChoice ) {
+        gameResult.innerText = `Il Numero del PC è: ${randomNum} Hai vinto!`;
+        feedback.classList.remove("d-none");
+    } else {
+        gameResult.innerText = `Il Numero del PC è: ${randomNum} Hai perso!`;
+        feedback.classList.remove("d-none");
+    }
+
+})
