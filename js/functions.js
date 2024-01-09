@@ -22,13 +22,21 @@ function isEven (result) {
 
 let result = 0;
 
+console.log(result)
+
 
 function sum (num1, num2) {
     
-    if ( isNaN(num1, num2) || num1 <= 0 ||  num2 <= 0 || num1 > 5 ||  num2 > 5 ) {
-        return alert("Hai inserito un valore non valido!");
-    }
-    
     result = num1 + num2;
     
+    console.log(result)
+    
+    if (isEven(result)) {
+        result = true;
+    } else {
+        result = false;
+    }
+    
+    console.log(result)
 }
+

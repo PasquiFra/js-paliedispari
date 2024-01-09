@@ -52,21 +52,36 @@ const feedback = document.getElementById("feedback");
 
 button.addEventListener ("click", function() {
 
+    
     let userChoice = pairUnpair.value;
-    let userNumber = yourNumber.value;
-
+    let userNumber = parseInt (yourNumber.value.trim());
+    
     console.log(userChoice, userNumber);
+    
+    if ( isNaN(userNumber) || userNumber <= 0 || userNumber > 5 ) {
+        
+        return alert("Hai inserito un valore non valido!");
+     
+    }
+    
 
     const randomNum = Math.floor((Math.random() * 5 + 1));
     
     console.log(randomNum);
-   
-    if ( isEven( sum(userNumber, randomNum)) === userChoice ) {
+    
+    sum(userNumber, randomNum);
+    
+    console.log(result);
+    
+    if ( result && userChoice ) {
         gameResult.innerText = `Il Numero del PC è: ${randomNum} Hai vinto!`;
         feedback.classList.remove("d-none");
+        
     } else {
+        
         gameResult.innerText = `Il Numero del PC è: ${randomNum} Hai perso!`;
         feedback.classList.remove("d-none");
+        
     }
-
+    
 })
