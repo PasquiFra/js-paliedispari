@@ -27,7 +27,7 @@ form.addEventListener ("submit", function(event) {
     event.preventDefault();
 
     // definisco la variabile relativa al valore inserito
-    inputText = textField.value.trim();
+    inputText = textField.value.trim().toLowerCase();
     console.log (inputText);
 
     //validazione del testo
@@ -40,8 +40,8 @@ form.addEventListener ("submit", function(event) {
     reverseword (inputText)
 
     // 2) confronto il risultato con il suo inverso
-    let isPalindrome = `${inputText} Is palindrome!`;
-    let isNotPalindrome = `${inputText} Is a normal word`;
+    let isPalindrome = `${textField.value} Is palindrome!`;
+    let isNotPalindrome = `${textField.value} Is a normal word`;
 
     if (reversedText === inputText){
         return inputResult.innerHTML = `<strong> ${isPalindrome} </strong>`;
