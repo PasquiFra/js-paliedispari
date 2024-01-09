@@ -73,7 +73,7 @@ button.addEventListener ("click", function() {
     
     console.log(result);
     
-    if ( result && userChoice ) {
+    if ( result === userChoice ) {
         gameResult.innerText = `Il Numero del PC è: ${randomNum} Hai vinto!`;
         feedback.classList.remove("d-none");
         

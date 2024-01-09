@@ -32,9 +32,9 @@ function sum (num1, num2) {
     console.log(result)
     
     if (isEven(result)) {
-        result = true;
+        result = "true";
     } else {
-        result = false;
+        result = "false";
     }
     
     console.log(result)
